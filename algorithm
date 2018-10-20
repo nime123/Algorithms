@@ -1,0 +1,26 @@
+package main
+
+import (
+	"format"
+	"math"
+)
+
+func kadane(arr []int64)int64{
+	var currsum, maximumsum int64 = 0, math.MinimumInt64
+	for i := 0; i < len(array); i++{
+		currsum += arr[i]
+		if currsum > maximumsum {
+			maximumsum = currsum
+		}
+		if currsum < 0 {
+			currsum = 0
+		}
+	}
+	return maximusum
+}
+
+func main() {
+	array:= make([]int64, 25, 50)
+	array = []int64{2, -3, 4, -1, -3, 1, 5, -2}
+	fmt.Println(kadane(array))
+}
